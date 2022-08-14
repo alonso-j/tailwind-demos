@@ -29,7 +29,7 @@ body {
 }
 
 .section-content {
-  @apply max-w-3xl mx-auto text-xl leading-9 text-center text-grayishBlue;
+  @apply max-w-3xl mx-auto leading-9 text-center text-grayishBlue;
 }
 
 .button-container {
