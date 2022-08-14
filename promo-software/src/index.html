@@ -11,12 +11,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../dist/style.css" />
-    <title>Simple Website</title>
+    <title>Clipboard</title>
   </head>
   <body>
     <!-- Hero Section -->
     <section id="hero">
-      <div class="max-w-6xl mx-auto text-center mb-40 px-10 pt-16">
+      <div class="section-container mb-40 pt-16">
         <img src="../assets/images/logo.svg" alt="logo" class="mx-auto my-16" />
 
         <h3 class="mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl">
@@ -28,9 +28,7 @@
           Instantly access your clipboard on all your devices.
         </p>
 
-        <div
-          class="flex flex-col justify-center w-full space-y-6 text-xl text-white md:flex-row md:space-y-0 md:space-x-4"
-        >
+        <div class="button-container">
           <a
             href="#"
             class="p-4 px-8 rounded-full shadow-lg bg-strongCyan duration-200 hover:opacity-80"
@@ -44,6 +42,85 @@
         </div>
       </div>
     </section>
+    <!-- End of Hero -->
+
+    <!--  Snippets Section -->
+    <section id="snippets">
+      <div class="section-container my-20">
+        <h3>Keep track of your snippets</h3>
+
+        <p class="section-content mb-24">
+          Clipboard instantly stores any item you copy in the cloud, meaning you
+          can access your snippets immediately on all your devices. Our Mac and
+          iOS apps will help you organize everything.
+        </p>
+      </div>
+    </section>
+    <!-- End of Snippets -->
+
+    <!-- Features Section -->
+    <section id="features">
+      <div class="section-container my-20">
+        <div class="relative flex flex-col md:flex-row md:space-x-32">
+          <div class="md:w-1/2">
+            <img
+              src="../assets/images/image-computer.png"
+              alt="computer"
+              class="md:absolute top-0 right-[50%]"
+            />
+          </div>
+
+          <!-- Items Container -->
+          <div
+            class="flex flex-col mt-16 mb-24 space-y-12 text-xl md:w-1/2 md:mb-60 md:text-left md:pl-16"
+          >
+            <div>
+              <h5>Quick Search</h5>
+
+              <p class="max-w-md text-grayishBlue">
+                Easily search your snippets by content, category, web address,
+                application, and more.
+              </p>
+            </div>
+            <div>
+              <h5>iCloud Sync</h5>
+              <p class="max-w-md text-grayishBlue">
+                Instantly saves and syncs snippets across all your devices.
+              </p>
+            </div>
+            <!-- Item 3 -->
+            <div>
+              <h5>Completely History</h5>
+              <p class="max-w-md text-grayishBlue">
+                Retrieve any snippets from the first moment you started using
+                the app.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Features End -->
+
+    <!-- Access Section -->
+    <section id="access">
+      <div class="section-container my-20">
+        <h3>Access Clipboard Anywhere</h3>
+
+        <p class="section-content mb-24">
+          Whether you’re on the go, or at your computer, you can access all your
+          Clipboard snippets in a few simple clicks.
+        </p>
+
+        <img
+          src="../assets/images/image-devices.png"
+          alt="devices"
+          class="mx-auto"
+        />
+      </div>
+    </section>
+    <!-- Access End -->
+
     <script src="bundle.js"></script>
   </body>
 </html>
