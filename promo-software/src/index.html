@@ -13,11 +13,14 @@
     <link rel="stylesheet" href="../dist/style.css" />
     <title>Clipboard</title>
   </head>
+
   <body>
     <!-- Hero Section -->
     <section id="hero">
-      <div class="section-container mb-40 pt-16">
-        <img src="../assets/images/logo.svg" alt="logo" class="mx-auto my-16" />
+      <div
+        class="section-container flex flex-col justify-center items-center h-screen"
+      >
+        <img src="../assets/images/logo.svg" alt="logo" class="my-16" />
 
         <h3 class="mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl">
           A history of everything you copy
@@ -213,6 +216,75 @@
       </div>
     </section>
     <!-- Bottom CTA End -->
+
+    <footer class="bg-gray-50">
+      <div class="section-container">
+        <div class="flex flex-col items-center justify-between md:flex-row">
+          <img src="../assets/images/logo.svg" alt="svg" class="scale-50" />
+
+          <!-- Content -->
+          <div
+            class="flex flex-col items-center justify-between flex-1 mb-10 space-y-6 md:flex-row md:mb-0 md:space-y-0 text-grayishBlue"
+          >
+            <!-- Menus -->
+            <div
+              class="flex flex-col space-y-4 md:flex-row md:ml-24 md:space-x-24 md:space-y-0"
+            >
+              <div class="flex flex-col space-y-4 text-center md:text-left">
+                <div>
+                  <a href="#" class="hover:text-strongCyan">FAQ</a>
+                </div>
+                <div>
+                  <a href="#" class="hover:text-strongCyan">Contact Us</a>
+                </div>
+              </div>
+
+              <div class="flex flex-col space-y-4 text-center md:text-left">
+                <div>
+                  <a href="#" class="hover:text-strongCyan">Privacy Policy</a>
+                </div>
+                <div>
+                  <a href="#" class="hover:text-strongCyan">Press Kit</a>
+                </div>
+              </div>
+
+              <div class="flex flex-col space-y-4 text-center md:text-left">
+                <div>
+                  <a href="#" class="hover:text-strongCyan"
+                    >Installation Guide</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Socials -->
+            <div class="flex justify-between w-32 py-1">
+              <a href="#">
+                <img
+                  src="../assets/images/icon-facebook.svg"
+                  alt="facebook"
+                  class="duration-200 ficon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="../assets/images/icon-twitter.svg"
+                  alt="twitter"
+                  class="duration-200 ficon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="../assets/images/icon-instagram.svg"
+                  alt="instagram"
+                  class="duration-200 ficon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="bundle.js"></script>
   </body>
