@@ -1,0 +1,16 @@
+{
+  "name": "simple-tailwind-starter",
+  "version": "1.0.0",
+  "description": "This is a vanilla tailwind/js/node project template ",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/style.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
+  },
+  "keywords": [],
+  "author": "Jose Alonso | alonso-j",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.1.7"
+  }
+}
