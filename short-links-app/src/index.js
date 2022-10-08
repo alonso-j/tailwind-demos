@@ -3,7 +3,7 @@ const menu = document.getElementById("menu");
 
 const input = document.getElementById("link-input");
 const linkForm = document.getElementById("link-form");
-const errMsg = document.getElementById("err-msg");
+const submitMsg = document.getElementById("submit-msg");
 
 btn.addEventListener("click", toggleNav);
 
@@ -28,18 +28,50 @@ function validURL(str) {
   return !!pattern.test(str);
 }
 
+const getShortLink = async (url) => {
+  const res = await fetch("https://api-ssl.bitly.com/v4/shorten", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${process.env.BITLY_ACCESS_TOKEN}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      group_guid: "Bma8kr2oGog",
+      long_url: url,
+    }),
+  });
+
+  const data = await res.json();
+
+  return data.link;
+};
+
+function resetForm() {
+  input.classList.remove("border-rose-500");
+  input.classList.remove("border-teal-400");
+  submitMsg.classList.remove("text-teal-400");
+  submitMsg.classList.remove("text-rose-500");
+}
+
 // Could add toats for successful submit
-const formSubmit = (ev) => {
+async function formSubmit(ev) {
   ev.preventDefault();
+  resetForm();
 
   if (input.value === "" || !validURL(input.value)) {
-    input.classList.add("border-red");
-    errMsg.innerHTML = "Make sure you enter a valid url";
+    input.classList.add("border-rose-500");
+    submitMsg.classList.add("text-rose-500");
+
+    submitMsg.innerHTML = "Make sure you enter a valid url";
   } else {
-    input.classList.remove("border-red");
-    errMsg.innerHTML = "";
+    const shortLink = await getShortLink(input.value);
+
+    input.classList.add("border-teal-400");
+    submitMsg.classList.add("text-teal-400");
+
+    submitMsg.innerHTML = `<a href="${shortLink}" class="hover:underline hover:underline-offset-1">${shortLink}</a>`;
     input.value = "";
   }
-};
+}
 
 linkForm.addEventListener("submit", formSubmit);
