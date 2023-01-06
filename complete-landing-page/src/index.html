@@ -7,13 +7,36 @@
     <link href="../dist/style.css" rel="stylesheet" />
     <title>Bookmark Website</title>
   </head>
-  <body class="font-montse">
-    <header></header>
-    <main
-      class="flex flex-col items-center justify-center h-screen m-0 overflow-hidden"
-    >
-      <h1 class="text-3xl bg-blue-500/30 p-1">Tailwind Starter Project</h1>
-    </main>
-    <footer></footer>
+  <body class="overflow-x-hidden">
+    <nav class="container relative mx-auto p-6">
+      <div class="flex items-center justifybetween space-x-20 my-6">
+        <!-- Logo & Title  -->
+        <div class="z-30">
+          <img
+            src="../assets/images/logo-bookmark.svg"
+            alt="Bookmark"
+            id="logo"
+          />
+        </div>
+
+        <!-- Nav Items  -->
+        <div
+          class="hidden items-center space-x-10 uppercase text-grayishBlue md:flex"
+        >
+          <a href="#features" class="tracking-widest hover:text-softRed"
+            >Fetures</a
+          >
+          <a href="#download" class="tracking-widest hover:text-softRed"
+            >Download</a
+          >
+          <a href="#faq" class="tracking-widest hover:text-softRed">FAQ</a>
+          <a
+            href="#"
+            class="px-8 py-2 text-white bg-softRed border-2 border-softRed rounded-lg shadow-md hover:text-softRed hover:bg-white"
+            >Login</a
+          >
+        </div>
+      </div>
+    </nav>
   </body>
 </html>
