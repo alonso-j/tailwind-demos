@@ -19,7 +19,7 @@ module.exports = {
         sans: ["Rubik", "sans-serif"],
       },
       backgroundImage: () => ({
-        dots: "url('../images/bg-dots.svg')",
+        dots: "url('../assets/images/bg-dots.svg')",
       }),
     },
   },
